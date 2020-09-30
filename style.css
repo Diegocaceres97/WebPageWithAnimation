@@ -10,7 +10,7 @@ html {
 }
 body .cartas{
     margin-top: -70px;
-    background-color:rgb(214, 241, 232);
+    background-color:rgb(238, 245, 243);
     font-family: 'DM Mono', monospace;
 }
 main{
@@ -111,16 +111,16 @@ li a{
     min-width: 250px;
     padding: 1.5rem;
     border-radius: 16px;
-    background: rgb(224, 98, 48);
+    background: rgba(241, 97, 61, 0.966);
     box-shadow:-1rem 0 3rem #000;
     transition: .2s;
     margin-top: 100px;
 }
 .card img{
-    height: 45vh;
-    width: 20vw;
-    border-radius: 3px;
-}
+    max-height: 40vh;
+     width: 19vw;
+     border-radius: 3px;}
+
 .cartas::-webkit-scrollbar{
 width: 10px;
 height: 10px;
@@ -150,10 +150,11 @@ background: linear-gradient(90deg,#201c29,#201c29);
 @media only screen and (max-width: 800px) {
     #ytube{
         display:flex;
+        margin-top: -12px;
         margin-left: auto;
         margin-right: auto;
         width: 90%;
-       
+       max-height: 76vh;
     }
     #logo{
         font-size: 2rem;
@@ -180,6 +181,30 @@ background: linear-gradient(90deg,#201c29,#201c29);
     .card img{
         width: 22.5vw;
         border-radius: 10px;
-        min-height: 55vh;
+        min-height: 50vh;
+    }
+    
+    
+   
+}
+footer{
+    text-align: center;
+    margin-top: 50px;
+}
+.about{
+    height: 80vh; 
+}
+section .about{
+    height: 80vh;
+}
+.about .imagen img{
+    width: 99vw;
+    height: 90vh;
+}
+@media only screen and (max-width: 600px){
+    .card img{
+        width: 25vw;
+        border-radius: 10px;
+        min-height: 50vh;
     }
 }
