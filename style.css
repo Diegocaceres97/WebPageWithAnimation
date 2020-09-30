@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body .cartas{
+    margin-top: -70px;
+    background-color:rgb(214, 241, 232);
+    font-family: 'DM Mono', monospace;
+}
+main{
+    font-family: "Heebo",sans-serif;
+color:rgb(231, 229, 229);
+}
+.landing{
+    min-height: 100vh;
+    background:rgba(182, 56, 25, 0.966);
+    background-size: cover;
+    padding: 0rem 5rem;
+    opacity: 1;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    background-color: rgb(255, 251, 251);
+  padding: 1rem;
+  font-family: "Heebo",sans-serif;
+}
+
+.nav-links{
+display: flex;
+list-style: none;
+}
+.nav-links li{
+    padding-left: 10rem;
+    font-size: 1.2rem;
+}
+li a{
+    color: inherit;
+    text-decoration: none;
+}
+#logo{
+    font-family: "Lobster",cursive;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+.big-text{
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+    font-family: "Lobster",cursive;
+}
+.intro{
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    background: rgb(71, 27, 192);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+.intro-text{
+    color:white;
+    font-family: "Heebo",sans-serif;
+    font-size: 3rem;
+}
+.hide{
+    background: black;
+    overflow: hidden;
+}
+.hide span{
+    transform: translateY(100%);
+    display: inline-block;
+}
+#ytube{
+    display:flex;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cartas{
+    display: flex;
+    padding: 3rem;
+    overflow-x:scroll ;
+}
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: rgb(224, 98, 48);
+    box-shadow:-1rem 0 3rem #000;
+    transition: .2s;
+    margin-top: 100px;
+}
+.card img{
+    height: 45vh;
+    width: 20vw;
+    border-radius: 3px;
+}
+.cartas::-webkit-scrollbar{
+width: 10px;
+height: 10px;
+}
+.cartas::-webkit-scrollbar-thumb{
+background: #201c29;
+border-radius: 10px;
+box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px -2px rgba(0, 0, 0, .25);
+}
+.cartas::-webkit-scrollbar-track{
+background: linear-gradient(90deg,#201c29,#201c29);
+}
+.card:hover{
+    transform: translateY(-1rem);
+}
+.card:hover~.card{ /*Con este simbolo agarramos todos los hermanos de cartas que floten (hover) o sea sean seleccionados*/
+    transform: translateX(130px);
+}
+.card:not(:first-child){/*Pseudo negacion que indica que la primera carta no se pondra en este caso
+    pero las siguientes si tendran el margen correspondiente*/
+    margin-left: -130px;
+}
+.aboutC{
+    background: rgb(214, 241, 232);
+    text-align: center;
+}
+@media only screen and (max-width: 800px) {
+    #ytube{
+        display:flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+       
+    }
+    #logo{
+        font-size: 2rem;
+    }
+    .big-text{
+        position: relative;
+    text-align: center;
+        font-size: 3rem;
+        font-family: "Lobster",cursive;
+
+    }
+    .hide{
+        margin-top: -100px;
+    }
+    .nav-links li{
+    padding: 1rem;
+    }
+    .cartas{
+        margin-left: auto;
+    }
+    .card{
+       min-width: 5vw;
+    }
+    .card img{
+        width: 22.5vw;
+        border-radius: 10px;
+        min-height: 55vh;
+    }
+}
