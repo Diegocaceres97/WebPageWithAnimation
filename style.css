@@ -183,9 +183,6 @@ background: linear-gradient(90deg,#201c29,#201c29);
         border-radius: 10px;
         min-height: 50vh;
     }
-    
-    
-   
 }
 footer{
     text-align: center;
@@ -206,5 +203,18 @@ section .about{
         width: 25vw;
         border-radius: 10px;
         min-height: 50vh;
+    }
+}
+@media only screen and (max-width: 400px){
+    .nav-links li{
+        margin-left: -10px;
+    }
+    .card img{
+        width: 30vw;
+        border-radius: 10px;
+        min-height: 35vh;
+    }
+    .landing{
+        min-height: 70vh;
     }
 }
